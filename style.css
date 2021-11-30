@@ -1,0 +1,233 @@
+:root {
+    --gardient2: #5c0f49;
+    --gardient1: #929fff;
+    --bg: #DCDCDC;
+    --themeButton: #680001;
+    --light: #fff;
+    --dark: #000;
+    --secColor: #686868;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    
+}
+
+::selection {
+    color: var(--light);
+    background: var(--themeButton);
+}
+
+.navbar {
+    text-decoration: none;
+    max-width: 100%;
+    z-index: 100000;
+    margin-top: 0%;
+    background-color: var(--secColor);
+    height: 6rem;
+    position: absolute;
+    margin: 0;
+    box-shadow: var(--dark) 1px 1px;
+}
+.navbar a {
+    float: right;
+    /* position: relative; */
+}
+
+#navbarSupportedContent li a{
+    color: var(--light);
+    margin: 0;
+    font-weight: bold;
+}
+
+#navbarSupportedContent li a:hover{
+    color: var(--themeButton);
+    /* background-color: var(--light); */
+    /* padding: 2rem; */
+}
+
+.container-fluid {
+    position: fixed;
+    background-color: var(--secColor);
+    padding-top: 0;
+    margin-top: -2%;
+}
+
+.navbar img {
+    float: left;
+    margin: 0;
+    height: 4rem;
+}
+
+nav button{
+    margin-left: 1em;
+}
+
+.header {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  padding-top: 40%;
+  background-image: url("./images/bg.jpg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: center;
+  opacity: 1;
+}
+
+.gradient {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.header::before {
+    content: "";
+      background-image: linear-gradient(var(--gardient2), var(--gardient1));
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.75;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
+  transform: translateY(62%);
+}
+
+.wave svg {
+  width: 102%;
+  height: auto;
+  margin-left: -1%;
+  fill: var(--bg);
+}
+
+.gradient p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--light);
+    text-shadow: 1.5px 1.5px var(--dark);
+    opacity: 1;
+    font-weight: bold;
+}
+
+.gradient h1 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--light);
+    text-shadow: 3px 3px var(--dark);
+    opacity: 1;
+}
+
+#themeButton {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--light);
+    text-shadow: 1.5px 1.5px var(--dark);
+    opacity: 1;
+    font-weight: bold;
+}
+
+#themeButton::after, #themeButton::before {
+    box-sizing: border-box;
+}
+
+#themeButton button{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+}
+
+button.learn-more {
+    width: 12rem;
+    height: auto;
+}
+
+button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: var(--themeButton);
+    border-radius: 1.625rem;
+    box-shadow: var(--dark) 1px 1px 1px 1px;
+}
+
+button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: var(--light);
+}
+
+button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.995rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: '';
+    top: -0.25rem;
+    right: 0.4625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid var(--light);
+    border-right: 0.125rem solid var(--light);
+    transform: rotate(220deg);
+}
+
+button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: -0.15rem 1.85rem 0 0;
+    color: var(--themeButton);
+    text-shadow: var(--dark) .9px .9px .9px;
+    font-weight: bold;
+    line-height: 1.6;
+    text-align: center;
+}
+button:hover .circle {
+    width: 100%;
+}
+button:hover .circle .icon.arrow {
+    background: var(--light);
+    transform: translate(9rem, 0);
+    box-shadow: black 1px;
+}
+
+button:hover .button-text {
+    color: var(--light);
+}

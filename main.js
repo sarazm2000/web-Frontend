@@ -8,5 +8,6 @@ function changeMode() {
 }
 
 function changeHeaderTheme (){
-    
+    var gradient = document.getElementById("header");
+    gradient.classList.toggle("change-gradient-header");
 }

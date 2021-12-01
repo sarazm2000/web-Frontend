@@ -4,16 +4,11 @@
     --darkModeBg: #202020;
     --lightModeBg: #DCDCDC;
     --mainColor: #680001;
-    --darkNavbar: #101010;
+    --darkNavbar: #501010;
     --lightNavbar: #686868;
     --darkModeText: #fff;
     --lightModeText: #000; 
 }
-
-[data-theme="dark"] {
-    --lightModeBg: #3F3F3F;
-    --text-color: #fff;
-  }
 
 body {
     margin: 0;
@@ -114,6 +109,10 @@ nav button{
       bottom: 0px;
       left: 0px;
       opacity: 0.75;
+}
+
+.change-gradient-header::before {
+    background-image: linear-gradient(blue, pink);
 }
 
 .wave {

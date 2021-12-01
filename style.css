@@ -112,7 +112,7 @@ nav button{
 }
 
 .change-gradient-header::before {
-    background-image: linear-gradient(blue, pink);
+    background-image: linear-gradient(var(--gradient1), var(--gradient2));
 }
 
 .wave {

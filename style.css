@@ -1,7 +1,7 @@
 :root {
     --gradient2: #5c0f49;
     --gradient1: #929fff;    
-    --darkModeBg: #303030;
+    --darkModeBg: #202020;
     --lightModeBg: #DCDCDC;
     --mainColor: #680001;
     --darkNavbar: #101010;
@@ -22,7 +22,7 @@ body {
 }
 
 .dark-mode-body{
-    background-color: #202020;
+    background-color: var(--darkModeBg);
     color: #fff;
 }
 
@@ -63,6 +63,10 @@ body {
     background-color: var(--lightNavbar);
     padding-top: 0;
     margin-top: -2%;
+}
+
+.dark-mode-navbar {
+    background-color: var(--darkNavbar);
 }
 
 .navbar img {
@@ -121,11 +125,15 @@ nav button{
   fill: var(--lightModeBg);
 }
 
+.dark-mode-wave {
+    fill: var(--darkModeBg);
+}
+
 .wave svg {
   width: 102%;
   height: auto;
   margin-left: -1%;
-  fill: var(--lightModeBg);
+  /* fill: var(--lightModeBg); */
 }
 
 .gradient p{
@@ -250,6 +258,3 @@ button:hover .button-text {
     color: var(--darkModeText);
 }
 
-.dark-mode-navbar{
-    background-color: #000;
-}

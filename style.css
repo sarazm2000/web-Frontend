@@ -31,9 +31,9 @@ body {
     margin: 0;
     box-shadow: var(--dark) 1px 1px;
 }
+
 .navbar a {
     float: right;
-    /* position: relative; */
 }
 
 #navbarSupportedContent li a{
@@ -44,8 +44,7 @@ body {
 
 #navbarSupportedContent li a:hover{
     color: var(--themeButton);
-    /* background-color: var(--light); */
-    /* padding: 2rem; */
+
 }
 
 .container-fluid {
@@ -64,6 +63,13 @@ body {
 nav button{
     margin-left: 1em;
 }
+
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance: none) {
+    .navbar {
+        padding-top: 55px;
+    }
+}}
 
 .header {
   position: relative;
@@ -225,7 +231,7 @@ button:hover .circle {
 button:hover .circle .icon.arrow {
     background: var(--light);
     transform: translate(9rem, 0);
-    box-shadow: black 1px;
+    box-shadow: var(--dark) 1px;
 }
 
 button:hover .button-text {

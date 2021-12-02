@@ -87,6 +87,7 @@ nav button{
   height: 300px;
   padding-top: 40%;
   background-image: url("./images/bg.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: center;

@@ -53,6 +53,10 @@ body {
 
 }
 
+.dark-mode-navbar-hover{
+    color: var(--lightNavbar);
+}
+
 .container-fluid {
     position: fixed;
     background-color: var(--lightNavbar);

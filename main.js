@@ -24,3 +24,8 @@ generateRandomHex = () => {
     }
     return number;
 }
+
+function menuBar() {
+    document.getElementById().innerHTML;
+
+}

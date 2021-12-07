@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css" 
+        integrity="sha384-+qdLaIRZfNu4cVPK/PxJJEy0B0f3Ugv8i482AKY7gwXwhaCroABd086ybrVKTa0q" crossorigin="anonymous">
+    <script src="main.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.0.0.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend</title>
+
+</head>
+<body id="body" dir="rtl">
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container-fluid" id="navbarContainer">
+            <img class="navbar-brand" src="./images/apple-touch-icon.png" alt="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a id="nav-link" class="nav-link" aria-current="page" href="#">خانه</a>
+                </li>
+                <li class="nav-item">
+                <a id="nav-link" class="nav-link" href="#cards">تیم ما</a>
+                </li>
+                <li class="nav-item">
+                <a id="nav-link" class="nav-link" href="#gallery">گالری</a>
+                </li>
+                <li class="nav-item">
+                <a id="nav-link" class="nav-link" href="#activities">فعالیت ها</a>
+                </li>
+                <li class="nav-item">
+                <a id="nav-link" class="nav-link" href="#contact">ارتباط با ما</a>
+                </li>
+                <li class="nav-item">
+                <a id="nav-link" class="nav-link" href="#comment">نظرات شما</a>
+                </li>
+                <li class="nav-item">
+                <a id="nav-link" class="nav-link" href="#news">عضویت</a>
+                </li>
+            </ul>
+            <button class="btn light" id="modeButton" onclick="changeMode()">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="70" height="70"
+                    viewBox="0 0 172 172"
+                    style=" fill:#000000;">
+                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" 
+                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" 
+                    stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" 
+                    style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path>
+                    <g fill="#000">
+                    <path d="M85.6775,13.6525c-0.14781,0.02688 -0.29562,0.06719 -0.43,0.1075c-1.59906,0.36281 -2.72781,1.80063 -2.6875,3.44v20.64c-0.01344,1.23625 0.63156,2.39188 1.70656,3.02344c1.075,0.61813 2.39187,0.61813 3.46687,0c1.075,-0.63156 1.72,-1.78719 1.70656,-3.02344v-20.64c0.04031,-0.99437 -0.36281,-1.94844 -1.075,-2.62031c-0.72562,-0.68531 -1.70656,-1.02125 -2.6875,-0.92719zM36.6575,33.8625c-1.29,0.22844 -2.32469,1.16906 -2.6875,2.41875c-0.36281,1.26313 0.01344,2.60688 0.9675,3.49375l14.62,14.62c0.83313,1.02125 2.16344,1.49156 3.45344,1.19594c1.27656,-0.29562 2.28438,-1.30344 2.58,-2.58c0.29563,-1.29 -0.17469,-2.62031 -1.19594,-3.45344l-14.62,-14.62c-0.71219,-0.76594 -1.74687,-1.15562 -2.795,-1.075c-0.1075,0 -0.215,0 -0.3225,0zM134.2675,33.8625c-0.77937,0.1075 -1.505,0.49719 -2.0425,1.075l-14.62,14.62c-1.02125,0.83313 -1.49156,2.16344 -1.19594,3.45344c0.29562,1.27656 1.30344,2.28438 2.58,2.58c1.29,0.29563 2.62031,-0.17469 3.45344,-1.19594l14.62,-14.62c1.075,-1.02125 1.38406,-2.62031 0.7525,-3.96406c-0.645,-1.35719 -2.06937,-2.13656 -3.5475,-1.94844zM85.6775,51.6c-0.1075,0.02688 -0.215,0.06719 -0.3225,0.1075c-0.215,0.01344 -0.43,0.05375 -0.645,0.1075c-0.04031,0.04031 -0.06719,0.06719 -0.1075,0.1075c-18.24812,0.77938 -33.0025,15.64125 -33.0025,34.0775c0,18.93344 15.46656,34.4 34.4,34.4c18.93344,0 34.4,-15.46656 34.4,-34.4c0,-18.36906 -14.63344,-33.17719 -32.7875,-34.0775c-0.12094,0 -0.20156,-0.1075 -0.3225,-0.1075c-0.34937,-0.13437 -0.71219,-0.20156 -1.075,-0.215c-0.06719,0 -0.14781,0 -0.215,0c-0.1075,0 -0.215,0 -0.3225,0zM85.785,58.48c0.06719,0 0.14781,0 0.215,0c0.1075,0 0.215,0 0.3225,0c15.05,0.17469 27.1975,12.42969 27.1975,27.52c0,15.21125 -12.30875,27.52 -27.52,27.52c-15.19781,0 -27.52,-12.30875 -27.52,-27.52c0,-15.13062 12.20125,-27.39906 27.305,-27.52zM16.2325,82.56c-1.89469,0.26875 -3.225,2.02906 -2.95625,3.92375c0.26875,1.89469 2.02906,3.225 3.92375,2.95625h20.64c1.23625,0.01344 2.39188,-0.63156 3.02344,-1.70656c0.61813,-1.075 0.61813,-2.39187 0,-3.46687c-0.63156,-1.075 -1.78719,-1.72 -3.02344,-1.70656h-20.64c-0.1075,0 -0.215,0 -0.3225,0c-0.1075,0 -0.215,0 -0.3225,0c-0.1075,0 -0.215,0 -0.3225,0zM133.1925,82.56c-1.89469,0.26875 -3.225,2.02906 -2.95625,3.92375c0.26875,1.89469 2.02906,3.225 3.92375,2.95625h20.64c1.23625,0.01344 2.39188,-0.63156 3.02344,-1.70656c0.61813,-1.075 0.61813,-2.39187 0,-3.46687c-0.63156,-1.075 -1.78719,-1.72 -3.02344,-1.70656h-20.64c-0.1075,0 -0.215,0 -0.3225,0c-0.1075,0 -0.215,0 -0.3225,0c-0.1075,0 -0.215,0 -0.3225,0zM51.6,116.53c-0.77937,0.1075 -1.505,0.49719 -2.0425,1.075l-14.62,14.62c-1.02125,0.83313 -1.49156,2.16344 -1.19594,3.45344c0.29562,1.27656 1.30344,2.28438 2.58,2.58c1.29,0.29563 2.62031,-0.17469 3.45344,-1.19594l14.62,-14.62c1.02125,-0.98094 1.33031,-2.49937 0.77938,-3.80281c-0.5375,-1.30344 -1.84094,-2.13656 -3.25188,-2.10969c-0.1075,0 -0.215,0 -0.3225,0zM119.325,116.53c-1.29,0.22844 -2.32469,1.16906 -2.6875,2.41875c-0.36281,1.26313 0.01344,2.60688 0.9675,3.49375l14.62,14.62c0.83313,1.02125 2.16344,1.49156 3.45344,1.19594c1.27656,-0.29562 2.28438,-1.30344 2.58,-2.58c0.29563,-1.29 -0.17469,-2.62031 -1.19594,-3.45344l-14.62,-14.62c-0.645,-0.68531 -1.53187,-1.06156 -2.4725,-1.075c-0.1075,0 -0.215,0 -0.3225,0c-0.1075,0 -0.215,0 -0.3225,0zM85.6775,130.6125c-0.14781,0.02688 -0.29562,0.06719 -0.43,0.1075c-1.59906,0.36281 -2.72781,1.80063 -2.6875,3.44v20.64c-0.01344,1.23625 0.63156,2.39188 1.70656,3.02344c1.075,0.61813 2.39187,0.61813 3.46687,0c1.075,-0.63156 1.72,-1.78719 1.70656,-3.02344v-20.64c0.04031,-0.99437 -0.36281,-1.94844 -1.075,-2.62031c-0.72562,-0.68531 -1.70656,-1.02125 -2.6875,-0.92719z">
+                    </path></g></g></svg>
+            </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="gradient">
+        <div class="header" id="header">
+            <div class="wave" id="wave">          
+                <svg viewBox="0 0 1440 120">
+                <path d="M1440,21.2101911 L1440,120 L0,120 L0,21.2101911 C120,35.0700637 240,42 360,42 C480,42 600,35.0700637 720,21.2101911 C808.32779,12.416393 874.573633,6.87702029 918.737528,4.59207306 C972.491685,1.8109458 1026.24584,0.420382166 1080,0.420382166 C1200,0.420382166 1320,7.35031847 1440,21.2101911 Z"></path>
+                </svg>
+            </div>
+            <div id="themeButton">
+                <button onclick="changeHeaderTheme()" class="learn-more">
+                <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                </span>
+                <span class="button-text">تغییر رنگ</span>
+                </button>
+            </div>
+            <h1>نام شرکت</h1>
+            <p>شعار شرکت</p>
+        </div>
+    </div>
+    
+    <div style="margin-top:50px;"></div>
+
+    <div id="cards">
+        <div class="titleContainer" id="titleContainer">معرفی تیم
+            <div style="padding-top: 5px;"></div>
+            <hr class="horizontalRule" />
+            <div style="padding-top: 5px;"></div>
+          </div>
+        <div class="cards-container">
+            <div class="product-card" id="product-card">
+                <div class="logo-cart">
+                  <img src="./images/Tehran_Milad_Tower,_2019.jpg" alt="logo" />
+                  <i class="bx bx-shopping-bag"></i>
+                </div>
+                <!-- <div class="main-images">
+                  <img id="blue" class="blue active" src="./images/Tehran_Milad_Tower,_2019.jpg" alt="blue" />
+                  <img id="pink" class="pink" src="./images/Tehran_Milad_Tower,_2019.jpg" alt="blue" />
+                  <img id="yellow" class="yellow" src="./images/Tehran_Milad_Tower,_2019.jpg" alt="blue" />
+                </div> -->
+                <div class="shoe-details">
+                  <div class="header_container">
+                    <span class="shoe_name">سینا الهی منش</span>
+                    <span class="shoe_number">۹۸۱۰۱۱۶۹</span>
+                  </div>
+                  <p id="card-desc2">
+                    ورودی ۹۸ مهندسی کامپیوتر دانشگاه صنعتی شریف
+                  </p>
+                  <div>
+                    <ul class="skills-list">
+                        <div class="list-item" style="height:20px; display:flex; margin-top:3px; margin-bottom:3px;"><img src="./images/card-arrow.png" width="18" height="18"/><div style="text-align:center; line-height: 1.5; vertical-align: middle; padding-right: 10px;">مهارت اول</div></div>
+                        <div class="list-item" style="height:20px; display:flex; margin-top:3px; margin-bottom:3px;"><img src="./images/card-arrow.png" width="18" height="18"/><div style="text-align:center; line-height: 1.5; vertical-align: middle; padding-right: 10px;">مهارت دوم</div></div>
+                        <div class="list-item" style="height:20px; display:flex; margin-top:3px; margin-bottom:3px;"><img src="./images/card-arrow.png" width="18" height="18"/><div style="text-align:center; line-height: 1.5; vertical-align: middle; padding-right: 10px;">مهارت سوم</div></div>
+                        <div class="list-item" style="height:20px; display:flex; margin-top:3px; margin-bottom:3px;"><img src="./images/card-arrow.png" width="18" height="18"/><div style="text-align:center; line-height: 1.5; vertical-align: middle; padding-right: 10px;">مهارت چهارم</div></div>
+                        <div class="list-item" style="height:20px; display:flex; margin-top:3px; margin-bottom:3px;"><img src="./images/card-arrow.png" width="18" height="18"/><div style="text-align:center; line-height: 1.5; vertical-align: middle; padding-right: 10px;">مهارت پنجم</div></div>
+                      </ul>  
+                  </div>
+                  <div style="margin-top:60px;"></div>
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bx-star"></i>
+                  </div>
+                </div>
+                <div class="color-price">
+                  <div class="color-option">
+                    <!-- <span class="color">شبکه های اجتماعی:</span> -->
+                    <div class="circles">
+                      <!-- <span class="circle blue active" id="blue"><img src="./images/Tehran_Milad_Tower,_2019.jpg" width="10" height="20"/></span>
+                      <span class="circle pink active" id="pink"></span>
+                      <span class="circle yellow active" id="yellow"></span> -->
+                    </div>
+                  </div>
+                  <div class="card-contact-box">
+                    <a><img src="./images/instagram.png" width="30" height="30"/></a>
+                    <a><img src="./images/telegram.png" width="30" height="30"/></a>
+                    <a><img src="./images/email.png" width="30" height="30"/></a>
+                    <a><img src="./images/linkedin.png" width="30" height="30"/></a>
+                  </div>
+                  <!-- <div class="price">
+                    <span class="price_num">$09.00</span>
+                    <span class="price_letter">Nine dollar only</span>
+                  </div> -->
+                </div>
+                <div class="button">
+                  <div class="button-layer"></div>
+                  <button style="direction:rtl;">مشاهده github</button>
+                </div>
+              </div>
+              
+              <div class="product-card product-card-head" id="product-card2">
+              
+                <h6 class="vc">سرگروه</h6>
+                  
+                <div class="logo-cart">
+                  <img src="./images/Tehran_Milad_Tower,_2019.jpg" alt="logo" />
+                  <i class="bx bx-shopping-bag"></i>
+                </div>
+                <!-- <div class="main-images">
+                  <img id="blue" class="blue active" src="./images/Tehran_Milad_Tower,_2019.jpg" alt="blue" />
+                  <img id="pink" class="pink" src="./images/Tehran_Milad_Tower,_2019.jpg" alt="blue" />
+                  <img id="yellow" class="yellow" src="./images/Tehran_Milad_Tower,_2019.jpg" alt="blue" />
+                </div> -->
+                <div class="shoe-details">
+                  <div class="header_container">
+                    <span class="shoe_name">سینا الهی منش</span>
+                    <span class="shoe_number">۹۸۱۰۱۱۶۹</span>
+                  </div>
+                  <p>
+                    ورودی ۹۸ مهندسی کامپیوتر دانشگاه صنعتی شریف
+                  </p>
+                  <div>
+                    <ul class="skills-list">
+                        <div class="list-item" style="height:20px; display:flex; margin-top:3px; margin-bottom:3px;"><img src="./images/card-arrow.png" width="18" height="18"/><div style="text-align:center; line-height: 1.5; vertical-align: middle; padding-right: 10px;">مهارت اول</div></div>
+                        <div class="list-item" style="height:20px; display:flex; margin-top:3px; margin-bottom:3px;"><img src="./images/card-arrow.png" width="18" height="18"/><div style="text-align:center; line-height: 1.5; vertical-align: middle; padding-right: 10px;">مهارت دوم</div></div>
+                        <div class="list-item" style="height:20px; display:flex; margin-top:3px; margin-bottom:3px;"><img src="./images/card-arrow.png" width="18" height="18"/><div style="text-align:center; line-height: 1.5; vertical-align: middle; padding-right: 10px;">مهارت سوم</div></div>
+                        <div class="list-item" style="height:20px; display:flex; margin-top:3px; margin-bottom:3px;"><img src="./images/card-arrow.png" width="18" height="18"/><div style="text-align:center; line-height: 1.5; vertical-align: middle; padding-right: 10px;">مهارت چهارم</div></div>
+                        <div class="list-item" style="height:20px; display:flex; margin-top:3px; margin-bottom:3px;"><img src="./images/card-arrow.png" width="18" height="18"/><div style="text-align:center; line-height: 1.5; vertical-align: middle; padding-right: 10px;">مهارت پنجم</div></div>
+                      </ul>  
+                  </div>
+                 
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bx-star"></i>
+                  </div>
+                </div>
+                <div class="color-price">
+                  <div class="color-option">
+                    <!-- <span class="color">شبکه های اجتماعی:</span> -->
+                    <div class="circles">
+                      <!-- <span class="circle blue active" id="blue"><img src="./images/Tehran_Milad_Tower,_2019.jpg" width="10" height="20"/></span>
+                      <span class="circle pink active" id="pink"></span>
+                      <span class="circle yellow active" id="yellow"></span> -->
+                    </div>
+                  </div>
+                  <div class="card-contact-box">
+                    <a><img src="./images/instagram.png" width="30" height="30"/></a>
+                    <a><img src="./images/telegram.png" width="30" height="30"/></a>
+                    <a><img src="./images/email.png" width="30" height="30"/></a>
+                    <a><img src="./images/linkedin.png" width="30" height="30"/></a>
+                  </div>
+                  <!-- <div class="price">
+                    <span class="price_num">$09.00</span>
+                    <span class="price_letter">Nine dollar only</span>
+                  </div> -->
+                </div>
+                <div class="button">
+                  <div class="button-layer"></div>
+                  <button style="direction:rtl; background-color: red;">مشاهده github</button>
+                </div>
+              </div>
+              
+              <div class="product-card" id="product-card3">
+                <div class="logo-cart">
+                  <img src="./images/Tehran_Milad_Tower,_2019.jpg" alt="logo" />
+                  <i class="bx bx-shopping-bag"></i>
+                </div>
+                <!-- <div class="main-images">
+                  <img id="blue" class="blue active" src="./images/Tehran_Milad_Tower,_2019.jpg" alt="blue" />
+                  <img id="pink" class="pink" src="./images/Tehran_Milad_Tower,_2019.jpg" alt="blue" />
+                  <img id="yellow" class="yellow" src="./images/Tehran_Milad_Tower,_2019.jpg" alt="blue" />
+                </div> -->
+                <div class="shoe-details">
+                  <div class="header_container">
+                    <span class="shoe_name">سینا الهی منش</span>
+                    <span class="shoe_number">۹۸۱۰۱۱۶۹</span>
+                  </div>
+                  <p>
+                    ورودی ۹۸ مهندسی کامپیوتر دانشگاه صنعتی شریف
+                  </p>
+                  <div>
+                    <ul class="skills-list">
+                        <div class="list-item" style="height:20px; display:flex; margin-top:3px; margin-bottom:3px;"><img src="./images/card-arrow.png" width="18" height="18"/><div style="text-align:center; line-height: 1.5; vertical-align: middle; padding-right: 10px;">مهارت اول</div></div>
+                        <div class="list-item" style="height:20px; display:flex; margin-top:3px; margin-bottom:3px;"><img src="./images/card-arrow.png" width="18" height="18"/><div style="text-align:center; line-height: 1.5; vertical-align: middle; padding-right: 10px;">مهارت دوم</div></div>
+                        <div class="list-item" style="height:20px; display:flex; margin-top:3px; margin-bottom:3px;"><img src="./images/card-arrow.png" width="18" height="18"/><div style="text-align:center; line-height: 1.5; vertical-align: middle; padding-right: 10px;">مهارت سوم</div></div>
+                        <div class="list-item" style="height:20px; display:flex; margin-top:3px; margin-bottom:3px;"><img src="./images/card-arrow.png" width="18" height="18"/><div style="text-align:center; line-height: 1.5; vertical-align: middle; padding-right: 10px;">مهارت چهارم</div></div>
+                        <div class="list-item" style="height:20px; display:flex; margin-top:3px; margin-bottom:3px;"><img src="./images/card-arrow.png" width="18" height="18"/><div style="text-align:center; line-height: 1.5; vertical-align: middle; padding-right: 10px;">مهارت پنجم</div></div>
+                      </ul>  
+                  </div>
+                  <div style="margin-top:60px;"></div>
+                  <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bx-star"></i>
+                  </div>
+                </div>
+                <div class="color-price">
+                  <div class="color-option">
+                    <!-- <span class="color">شبکه های اجتماعی:</span> -->
+                    <div class="circles">
+                      <!-- <span class="circle blue active" id="blue"><img src="./images/Tehran_Milad_Tower,_2019.jpg" width="10" height="20"/></span>
+                      <span class="circle pink active" id="pink"></span>
+                      <span class="circle yellow active" id="yellow"></span> -->
+                    </div>
+                  </div>
+                  <div class="card-contact-box">
+                    <a><img src="./images/instagram.png" width="30" height="30"/></a>
+                    <a><img src="./images/telegram.png" width="30" height="30"/></a>
+                    <a><img src="./images/email.png" width="30" height="30"/></a>
+                    <a><img src="./images/linkedin.png" width="30" height="30"/></a>
+                  </div>
+                  <!-- <div class="price">
+                    <span class="price_num">$09.00</span>
+                    <span class="price_letter">Nine dollar only</span>
+                  </div> -->
+                </div>
+                <div class="button">
+                  <div class="button-layer"></div>
+                  <button style="direction:rtl;">مشاهده github</button>
+                </div>
+              </div>
+         </div>
+    </div>
+    
+    <div style="margin-top:100px;"></div>
+
+    <div id="gallery">
+        <div class="activities-container" id="activities-container">
+            <div class="titleContainer" id="titleContainer2">گالری تصاویر
+              <div style="padding-top: 5px;"></div>
+              <hr class="horizontalRule" />
+              <div style="padding-top: 5px;"></div>
+            </div>
+            
+              <div class="gallery-image-container">
+                <div class="shadowBehind" style="width: 48%;"><img src="./images/Tehran_Milad_Tower,_2019.jpg" width="80%;" class="gallery-image" /> <div class="middle"><h1>تیتر</h1><h6>توضیحات</h6></div></div>
+                <div class="shadowBehind" style="width: 48%;"><img src="./images/Tehran_Milad_Tower,_2019.jpg" width="48%;" class="gallery-image" /> <div class="middle"><h1>تیتر</h1><h6>توضیحات</h6></div></div>
+              </div>
+              
+              <div style="margin-top:10px;"></div>
+              
+              <div class="gallery-image-container"> 
+                <div class="shadowBehind" style="width: 31.33%;"><img src="./images/Tehran_Milad_Tower,_2019.jpg" width="80%;" class="gallery-image" /> <div class="middle"><h1>تیتر</h1><h6>توضیحات</h6></div></div> 
+                <div class="shadowBehind" style="width: 31.33%;"><img src="./images/Tehran_Milad_Tower,_2019.jpg" width="80%;" class="gallery-image" /> <div class="middle"><h1>تیتر</h1><h6>توضیحات</h6></div></div> 
+                <div class="shadowBehind" style="width: 31.33%;"><img src="./images/Tehran_Milad_Tower,_2019.jpg" width="80%;" class="gallery-image" /> <div class="middle"><h1>تیتر</h1><h6>توضیحات</h6></div></div> 
+              </div>
+              
+              <div class="gallery-image-container2" style="margin-left: auto; margin-right: 0; margin-bottom: 20px; float: right; width: 43%; text-align:center;">
+              
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" style="width: 400px;">
+                      <div class="carousel-item active" style="width: 400px;">
+                        <div class="shadowBehind" style="width: 100%;"><img src="./images/Tehran_Milad_Tower,_2019.jpg" width="80%;" class="gallery-image" /> <div class="middle"><h1>تیتر</h1><h6>توضیحات</h6></div></div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="shadowBehind" style="width: 100%;"><img src="./images/Tehran_Milad_Tower,_2019.jpg" width="80%;" class="gallery-image" /> <div class="middle"><h1>تیتر</h1><h6>توضیحات</h6></div></div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="shadowBehind" style="width: 100%;"><img src="./images/Tehran_Milad_Tower,_2019.jpg" width="80%;" class="gallery-image" /> <div class="middle"><h1>تیتر</h1><h6>توضیحات</h6></div></div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="shadowBehind" style="width: 100%;"><img src="./images/Tehran_Milad_Tower,_2019.jpg" width="80%;" class="gallery-image" /> <div class="middle"><h1>تیتر</h1><h6>توضیحات</h6></div></div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="shadowBehind" style="width: 100%;"><img src="./images/Tehran_Milad_Tower,_2019.jpg" width="80%;" class="gallery-image" /> <div class="middle"><h1>تیتر</h1><h6>توضیحات</h6></div></div>
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" style="top: 100px;">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" style="left: -220px; top: 100px;">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                  
+              </div>
+          </div>
+    </div>
+    
+    <div style="margin-top:100px;"></div>
+
+    <div id="activities">
+        <div class="activities-container" id="activities-container2">
+            <div class="titleContainer" id="titleContainer3">فعالیت های مجموعه
+                <div style="padding-top: 5px;"></div>
+                <hr class="horizontalRule" />
+                <div style="padding-top: 5px;"></div>
+              </div>
+            <div class="activities-inner-container">
+            
+                <div style="margin-left: auto; margin-right: 0; margin-bottom: 20px; float: right; width: 43%; text-align:center;">
+              
+                    <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner" style="width: 400px;">
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="./images/Tehran_Milad_Tower,_2019.jpg" alt="First slide">
+                                <div style="padding-top: 15px;"></div>
+                                <div class=" activities-text-container">
+                                    <h1 id="activities-text">Activity 5</h1>
+                                    <div style="padding-top:10px;"></div>
+                                    <h3 id="activities-descriptor" style="font-size: 18px;">Description 5</h3>
+                                </div>
+                              </div>
+                              
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="./images/Tehran_Milad_Tower,_2019.jpg" alt="First slide">
+                                <div style="padding-top: 15px;"></div>
+                                <div class=" activities-text-container">
+                                    <h1 id="activities-text">Activity 4</h1>
+                                    <div style="padding-top:10px;"></div>
+                                    <h3 id="activities-descriptor" style="font-size: 18px;">Description 4</h3>
+                                </div>
+                              </div>
+                              
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="./images/Tehran_Milad_Tower,_2019.jpg" alt="First slide">
+                                <div style="padding-top: 15px;"></div>
+                                <div class=" activities-text-container">
+                                    <h1 id="activities-text">Activity 3</h1>
+                                    <div style="padding-top:10px;"></div>
+                                    <h3 id="activities-descriptor" style="font-size: 18px;">Description 3</h3>
+                                </div>
+                              </div>
+                              
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="./images/Tehran_Milad_Tower,_2019.jpg" alt="First slide">
+                                <div style="padding-top: 15px;"></div>
+                                <div class=" activities-text-container">
+                                    <h1 id="activities-text">Activity 2</h1>
+                                    <div style="padding-top:10px;"></div>
+                                    <h3 id="activities-descriptor" style="font-size: 18px;">Description 2</h3>
+                                </div>
+                              </div>
+                              
+                          <div class="carousel-item active" style="width: 400px;">
+                            <img class="d-block w-100" src="./images/Tehran_Milad_Tower,_2019.jpg" alt="First slide">
+                            <div style="padding-top: 15px;"></div>
+                            <div class=" activities-text-container">
+                                <h1 id="activities-text">Activity 1</h1>
+                                <div style="padding-top:10px;"></div>
+                                <h3 id="activities-descriptor" style="font-size: 18px;">Description 1
+                                
+                                  ایران با نام رسمی جمهوری اسلامی ایران، کشوری در آسیای غربی است. این کشور با ۱٬۶۴۸٬۱۹۵ کیلومتر مربع پهناوری، دومین کشور بزرگ خاورمیانه است. ایران از شمال غرب با ارمنستان و آذربایجان، از شمال با دریای خزر، از شمال شرق با ترکمنستان، از شرق با افغانستان و پاکستان، از جنوب با خلیج فارس و دریای عمان و در غرب با عراق و ترکیه هم‌مرز است. این کشور خاورمیانه‌ای، جایگاه استراتژیکی در منطقهٔ خلیج فارس دارد و تنگهٔ هرمز در جنوب آن، مسیری حیاتی برای انتقال نفت خام است. جمعیت کل استان‌های ایران از ۸۳٫۵ میلیون تن می‌گذرد و تهران، پایتخت و پرجمعیت‌ترین شهر این کشور است. ایران، جامعه‌ای با قومیت و فرهنگ‌های گوناگون دارد و گروه قومی و فرهنگی غالب این کشور، برآمده از فارسی‌زبانان آن است. در کنار آنان، قومیت‌های دیگری، همانند اقوام پرجمعیت آذری و کُرد وجود دارند. قانون اساسی جمهوری اسلامی ایران، اسلام شیعه را دین رسمی ایران اعلام کرده‌است و اکثریت مردم این کشور، پیروان همین مذهب هستند. زبان رسمی این کشور نیز فارسی است.
+                
+                                  سرزمین ایران، میزبان تمدن‌های کهنی چون ایلام و جیرفت بوده‌است. نخستین‌بار در سدهٔ هفتم پیش از میلاد، در دوران پادشاهی ماد بود که بخش‌های قابل توجهی از فلات ایران یکپارچه شد. در سدهٔ ششم پ. م، شاهنشاهی هخامنشی توسط کوروش بزرگ بنیان نهاده شد تا ایران یکی از بزرگ‌ترین امپراتوری‌های تاریخ را تشکیل دهد. در سدهٔ چهارم پ. م، اسکندر مقدونی این امپراتوری را پایان داد و ایران به بخشی از ممالک هلنیستی تبدیل شد. پدیداری شاهنشاهی اشکانی در سدهٔ سوم پ. م، باد
+                                  
+                                  </h3>
+                              </div>
+                          </div>
+                        
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev" style="top: 100px;">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next" style="left: -220px; top: 100px;">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                      
+                  </div></div>
+              
+             <div class=" activities-text-container activities-text-container2">
+                <h1 id="activities-text">Activity 1</h1>
+                <div style="padding-top:10px;"></div>
+                <h3 id="activities-descriptor" style="font-size: 18px;">Description 1
+                
+                  ایران با نام رسمی جمهوری اسلامی ایران، کشوری در آسیای غربی است. این کشور با ۱٬۶۴۸٬۱۹۵ کیلومتر مربع پهناوری، دومین کشور بزرگ خاورمیانه است. ایران از شمال غرب با ارمنستان و آذربایجان، از شمال با دریای خزر، از شمال شرق با ترکمنستان، از شرق با افغانستان و پاکستان، از جنوب با خلیج فارس و دریای عمان و در غرب با عراق و ترکیه هم‌مرز است. این کشور خاورمیانه‌ای، جایگاه استراتژیکی در منطقهٔ خلیج فارس دارد و تنگهٔ هرمز در جنوب آن، مسیری حیاتی برای انتقال نفت خام است. جمعیت کل استان‌های ایران از ۸۳٫۵ میلیون تن می‌گذرد و تهران، پایتخت و پرجمعیت‌ترین شهر این کشور است. ایران، جامعه‌ای با قومیت و فرهنگ‌های گوناگون دارد و گروه قومی و فرهنگی غالب این کشور، برآمده از فارسی‌زبانان آن است. در کنار آنان، قومیت‌های دیگری، همانند اقوام پرجمعیت آذری و کُرد وجود دارند. قانون اساسی جمهوری اسلامی ایران، اسلام شیعه را دین رسمی ایران اعلام کرده‌است و اکثریت مردم این کشور، پیروان همین مذهب هستند. زبان رسمی این کشور نیز فارسی است.
+
+                  سرزمین ایران، میزبان تمدن‌های کهنی چون ایلام و جیرفت بوده‌است. نخستین‌بار در سدهٔ هفتم پیش از میلاد، در دوران پادشاهی ماد بود که بخش‌های قابل توجهی از فلات ایران یکپارچه شد. در سدهٔ ششم پ. م، شاهنشاهی هخامنشی توسط کوروش بزرگ بنیان نهاده شد تا ایران یکی از بزرگ‌ترین امپراتوری‌های تاریخ را تشکیل دهد. در سدهٔ چهارم پ. م، اسکندر مقدونی این امپراتوری را پایان داد و ایران به بخشی از ممالک هلنیستی تبدیل شد. پدیداری شاهنشاهی اشکانی در سدهٔ سوم پ. م، باد
+                  
+                  </h3>
+              </div>
+              <!-- <div class="activities-images-container">
+                  <img src="./images/Tehran_Milad_Tower,_2019.jpg" class="activities-images3" /> 
+                  <img src="./images/Tehran_Milad_Tower,_2019.jpg" class="activities-images2" /> 
+                  <img src="./images/Tehran_Milad_Tower,_2019.jpg" class="activities-images" /> 
+              </div> -->
+            
+            
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+<div class="wrapper">
+<div class="item item5"><img src="./images/Tehran_Milad_Tower,_2019.jpg" class="activities-images3" /> </div>
+<div class="item item4"><img src="./images/Tehran_Milad_Tower,_2019.jpg" class="activities-images3" /> </div>
+<div class="item item3"><img src="./images/Tehran_Milad_Tower,_2019.jpg" class="activities-images3" /> </div>
+<div class="item item2"><img src="./images/Tehran_Milad_Tower,_2019.jpg" class="activities-images3" /> </div>
+<div class="item item1"><img src="./images/Tehran_Milad_Tower,_2019.jpg" class="activities-images3" /> </div>
+</div>
+
+<div class="controls selection-off">
+<div class="left selection-off" onclick="turnRight()"><i class="fas fa-caret-right" style="margin-left: 5px;"></i></div>
+<div class="right selection-off" onclick="turnLeft()"><i class="fas fa-caret-left" style="margin-right: 5px;"></i></div>
+</div>
+          </div>
+    </div>
+
+    <div id="contact">
+        <h1> تماس با ما</h1>
+       
+
+        <div class="">
+            [Forwarded from Dr Beigi]
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+            [Forwarded from Dr Beigi]
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+            [Forwarded from Dr Beigi]
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+            [Forwarded from Dr Beigi]
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+            [Forwarded from Dr Beigi]
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+        </div>
+    </div>
+
+    <div id="comment">
+        <h1>نظرات</h1>
+
+        <div class="">
+            [Forwarded from Dr Beigi]
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+            [Forwarded from Dr Beigi]
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+            [Forwarded from Dr Beigi]
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+            [Forwarded from Dr Beigi]
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+            [Forwarded from Dr Beigi]
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+        </div>
+
+    </div>
+    <div id="news">
+        <h1>اخبار</h1>
+        
+        <div class="">
+            [Forwarded from Dr Beigi]
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+            [Forwarded from Dr Beigi]
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+            [Forwarded from Dr Beigi]
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+            [Forwarded from Dr Beigi]
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+            [Forwarded from Dr Beigi]
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+        </div>
+        
+    </div>
+    
+</body>
+</html>

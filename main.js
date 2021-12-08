@@ -23,6 +23,11 @@ function changeMode() {
     activitiesContainer2.classList.toggle("dark-product-card");
     var titleContainer3 = document.getElementById("titleContainer3");
     titleContainer3.classList.toggle("dark-product-desc");
+    var activitiesContainer10 = document.getElementById("activities-container10");
+    activitiesContainer10.classList.toggle("dark-product-card");
+    var news = document.getElementById("news");
+    news.classList.toggle("dark-product-card");
+    
 }
 
 function changeHeaderTheme (){
@@ -174,8 +179,37 @@ function makeATurn(){
 //     console.log(slideFrom+' => '+slideTo);
 // });
 
-document.getElementsByClassName('carousel').on('slide',function(e){
-    var slideFrom = $(this).find('.active').index();
-    var slideTo = $(e.relatedTarget).index();
-    console.log(slideFrom+' => '+slideTo);
+// document.getElementsByClassName('carousel').on('slide',function(e){
+//     var slideFrom = $(this).find('.active').index();
+//     var slideTo = $(e.relatedTarget).index();
+//     console.log(slideFrom+' => '+slideTo);
+// });
+
+
+/* Darioush */
+
+
+window.onload=function(){
+  document.getElementById('modalYes').addEventListener('click', launch_toast)
+}
+
+function launch_toast() {
+   var t = document.getElementById('toast');
+   t.className = "show";
+   setTimeout(function(){ t.className = t.className.replace("show", ""); }, 3000);
+}
+
+
+$(document).ready(function(){
+$("#news-submit").click(function(){
+console.log('jjjj');
+  $("#myModal").modal();
 });
+});
+
+$(document).ready(function(){
+  $("#news-submit2").click(function(){
+    console.log('jjjj');
+    $("#myModal").modal();
+  });
+  });

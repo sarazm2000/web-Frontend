@@ -262,54 +262,38 @@ button:hover .button-text {
     color: var(--darkModeText);
 }
 
-@media screen and (max-width: 1000px) {
-  .container-fluid {
-      width: 100%;
-      top: 0%;
-  }
-  .navbar img {
-      margin-top: .4rem;
-  }
-
-  #navbarSupportedContent li a {
-      width: 100%;
-      font-size: 16px;
-      margin-top: .39rem;
-  }
-
-  #navbarSupportedContent ul {
-    margin-top: 1rem;
-  }
-
-  .navbar-toggler{
-      margin-top: .48rem;
-  }
-
-
-  #modeButton svg {
-      width: 40px;
-      height: 40px;
-  }
-
-  #themeButton {
-      margin-top: 1.3rem;
-  }
-
-  #navbarContainer {
-      top: .49rem;
-  }
-}
-
 @media screen and (max-width: 760px) {
-  #navbarSupportedContent li a {
-    width: 100%;
-    font-size: 13px;
-    margin-top: .59rem;
-  }
+    .container-fluid {
+        width: 100%;
+        top: 0%;
+    }
+    .navbar img {
+        margin-top: .4rem;
+    }
 
-  #navbarSupportedContent ul {
-    margin-bottom: .4rem;
-  }
+    #navbarSupportedContent li a {
+        width: 100%;
+        font-size: 12px;
+        margin-top: .39rem;
+    }
+
+    .navbar-toggler{
+        margin-top: .48rem;
+    }
+
+
+    #modeButton svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    #themeButton {
+        margin-top: 1.3rem;
+    }
+
+    #navbarContainer {
+        top: .49rem;
+    }
 }
 
 
@@ -993,6 +977,22 @@ a:hover{
     .activities-text-container2 {
         display: none;
     }
+    
+    .activities-inner-container3 {
+      display: none;
+    }
+    
+    .form-news {
+      display: none;
+    }
+    
+    .form-news2 {
+      display: block;
+    }
+}
+
+.form-news2 {
+  display: none;
 }
 
 @media screen and (max-width: 1000px) {
@@ -1064,3 +1064,525 @@ a:hover{
 .dark-product-desc {
     color: #fff;
 }
+
+
+
+
+/* Darioush */
+
+
+
+/* کد داریوش */
+
+.news-dark{
+  background-color: rgb(0, 0, 0);
+}
+
+.form-news {
+  display: flex;
+  justify-content:space-between;
+}
+
+.contact-inner {
+  margin-top:100px;
+  height: auto;
+  margin-bottom: 100px;
+}
+
+.footer{
+  position: absolute;
+  width: 99%;
+  background-color: rgb(45, 45, 45);
+  padding: 10em;
+  z-index: -1;
+  text-align: center;
+  color: var(--col5);
+}
+
+#footerText{
+  font-size: 20px;
+  margin-bottom: -12%;
+}
+
+/*contact us css*/
+
+#topContactUs {
+  max-height: 100px;
+  z-index: 1;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1270 380" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="rgba(220, 220, 220, 1)" d="M 0 0 L 651 110 L 651 0 L 0 0 Z" stroke-width="0"></path> <path fill="rgba(220, 220, 220, 1)" d="M 650 110 L 1270 0 L 1270 0 L 650 0 Z" stroke-width="0"></path> </svg>');
+  background-size: cover;
+
+  background-repeat: no-repeat;
+  margin-top: 0;
+  
+ }
+ 
+ @media (max-width:1279px) {
+  #topContactUs{
+    background-size: contain;
+  }
+ }
+ #bottomContactUs {
+   position: relative;
+  width: 90%;
+  height: 100px;
+  margin: auto;
+  margin-bottom: 0;
+  bottom: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1280 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="rgb(49, 49, 49)" d="M 0 0 L 651 110 L 651 0 L 0 0 Z" stroke-width="0"></path> <path fill="rgb(49, 49, 49)" d="M 650 110 L 1280 0 L 1280 0 L 650 0 Z" stroke-width="0"></path> </svg>');
+
+  background-size: cover;
+  background-repeat: no-repeat;
+ }
+ 
+ @media (max-width:1279px) {
+  #bottomContactUs {
+    background-size: contain;
+  
+  }
+ }
+ .contactUs{
+
+  height: 660px;
+  width: 90%;
+  margin: auto;
+  margin-top: -100px;
+ }
+ 
+
+.contactUsBody{
+  z-index: 0;
+  background-color: rgb(49, 49, 49);
+  height: 550px;
+  width: 90%;
+  margin: auto;
+}
+.contactUs a img{
+  position: relative;
+  height: 100px;
+  width: 100px; 
+}
+
+.contactUsText{
+  width: 50%;
+  order: 1;
+  margin-right: 1em;
+  float: left;
+  position: relative;
+  padding-right: 30px;
+  top: 0;
+}
+
+#contactUstextU{
+  /* font-family: nazanin; */
+  font-size: 60px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  margin-top: 60px;
+  text-align: ltr;
+}
+#contactUsTextM{
+  /* font-family: nazanin; */
+  font-size: 80px;
+  font-weight: bold;
+  color: rgb(244, 191, 58);
+  text-align: ltr;
+}
+
+#contactUstextD{
+  /* font-family: nazanin; */
+  font-size: 60px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-align: ltr;
+}
+
+.logoimage{
+text-align: left;
+  width: 50%;
+  margin: 1em 0;
+  right: 1;
+}
+
+#logo1{
+  position: relative;
+  margin-top: 18px;
+  margin-right: 40px;
+}
+
+#logo2{
+  position: relative;
+  margin-top: 18px;
+}
+
+#logo3{
+  position: relative;
+  margin-top: 18px;
+  }
+
+#logo3 a img:hover, 
+#logo2 a img:hover,
+#logo1 a img:hover{
+  border-radius: 50%;
+  background-color: rgb(244, 191, 58);
+}
+
+
+#contactUsTextM:hover{
+  transform: scale(1.2);
+}
+
+/* @font-face {
+  font-family: nazanin;
+  src: url('BNazanin.ttf');
+} */
+
+/*news css*/
+
+.news{
+  height: 200px;
+  width: 69%;
+  margin: auto;
+  margin-top: 200px;
+  margin-bottom: -90px;
+  padding: 20px;
+  z-index: 1;
+  background-color: rgb(104, 131, 251);
+}
+
+.form-inline{
+  justify-content: space-between; 
+  position: relative; 
+  margin: auto; 
+  margin-top: 30px;
+}
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+
+#news-submit{
+  float: left;
+  width: 15%;
+  /* margin-top: 6px; */
+  height: 35px;
+  /* width: 160px; */
+  background-image: linear-gradient(to right, rgb(229, 179, 54), rgb(244, 191, 57));
+  background-position-y: 0;
+  border: transparent;
+}
+
+.news-title{
+  position: relative;
+  padding-right: 3.5%;
+  /* font-family: nazanin; */
+  font-size: 55px;
+  font-weight:bold;
+  color: rgb(255, 255, 255);
+}
+
+#firstnameid{
+    display: none;
+}
+
+#lastnameid{
+    display: none;
+}
+
+#emailid{
+    display: none;
+}
+
+/*end of new css*/
+
+
+/*modal css*/
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/*toast css*/
+
+#toast {
+  visibility: hidden;
+  max-width: 10px;
+  height: 50px;
+  /*margin-left: -125px;*/
+  margin: right;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+
+  position: fixed;
+  z-index: 1;
+  left: 0;right:0;
+  bottom: 30px;
+  font-size: 17px;
+  white-space: nowrap;
+}
+#toast #img{
+width: 50px;
+height: 50px;
+  
+  float: left;
+  
+  padding-top: 16px;
+  padding-bottom: 16px;
+  
+  box-sizing: border-box;
+
+  
+  background-color: #111;
+  color: #fff;
+}
+#toast #desc{
+
+  
+  color: #fff;
+ 
+  padding: 16px;
+  
+  overflow: hidden;
+white-space: nowrap;
+}
+
+#toast.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes expand {
+  from {min-width: 50px} 
+  to {min-width: 350px}
+}
+
+@keyframes expand {
+  from {min-width: 50px}
+  to {min-width: 350px}
+}
+@-webkit-keyframes stay {
+  from {min-width: 350px} 
+  to {min-width: 350px}
+}
+
+@keyframes stay {
+  from {min-width: 350px}
+  to {min-width: 350px}
+}
+@-webkit-keyframes shrink {
+  from {min-width: 350px;} 
+  to {min-width: 50px;}
+}
+
+@keyframes shrink {
+  from {min-width: 350px;} 
+  to {min-width: 50px;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 60px; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 60px; opacity: 0;}
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+  .news{
+    height: 400px;
+  }
+  #firstnameid{
+    font-size: 15px;
+    flex-wrap: wrap;
+    display:flex;
+    flex-direction: column;
+   color: white;
+  }
+  #lastnameid{
+    flex-wrap: wrap;
+    font-size: 15px;
+    display:flex;
+    flex-direction: column;
+      color: white;
+  }
+  
+  #emailid{
+    flex-wrap: wrap;
+    font-size: 15px;
+    display:flex;
+    flex-direction: column;
+      color: white;
+  }
+
+  ::placeholder{
+    visibility: hidden;
+  }
+
+  #news-submit{
+    margin: auto;
+    margin-top: 10px;
+    width: 40%;
+  
+  }
+  #firstname{
+    width: 100%;
+    
+  }
+  #lastname{
+    width: 100%;
+    
+  }
+  #email{
+    width: 100%;
+    
+  }
+
+  .footer{
+    margin-top: 40px;
+    padding: 5em;
+    width: 100%;
+  }
+
+  #footerText{
+    font-size: 15px;
+    margin-bottom: -12%;
+  }
+  .contactUsBody{
+    position: relative;
+    z-index: 0;
+    background-color: rgb(49, 49, 49);
+    height: 550px;
+    width: 90%;
+    margin: auto;
+  }
+
+  #bottomContactUs{
+    display: none;
+  }
+  #topContactUs{
+    display: none;
+  }
+
+  .contactUsText{
+    text-align: center;
+    /* border-style: dotted; */
+    /* border-color: violet; */
+    height: 60%;
+    width: 100%;
+    margin-right: 50%;
+    position: relative;
+    padding-right: 30px;
+    top: 0;
+  }
+
+  #contactUstextU{
+    font-size: 40px;
+    margin-top: 60px;
+    text-align: ltr;
+  }
+  #contactUsTextM{
+    font-size: 60px;
+    text-align: ltr;
+  }
+  
+  #contactUstextD{
+    font-size: 40px;
+
+    text-align: ltr;
+  }
+
+  .logoimage{
+    /* border-style: dotted; */
+    /* border-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+
+      width: 80%;
+      height: 50%;
+      margin: 1em 0;
+      
+    }
+
+
+    #logo1{
+
+      /* border-style: dotted; */
+      /* border-color: violet; */
+      /* display: flex; */
+      /* position: relative; */
+    }
+    
+    #logo2{
+ 
+      /* border-style: dotted; */
+      /* border-color: violet; */
+      /* position: relative; */
+      /* display: flex; */
+    }
+    
+    #logo3{
+   
+      /* border-style: dotted; */
+      /* border-color: violet; */
+      /* position: relative; */
+      /* display: flex; */
+      }
+
+      
+      .contactUs a img{
+        position: relative;
+        height: 70px;
+        width: 70px; 
+      }
+      
+      .form-news {
+        display: none;
+      }
+      
+      .form-news2 {
+        display: block;
+      }
+      
+      .contact-inner {
+        margin-top:10px;
+      }
+}
+

@@ -262,38 +262,54 @@ button:hover .button-text {
     color: var(--darkModeText);
 }
 
+@media screen and (max-width: 1000px) {
+  .container-fluid {
+      width: 100%;
+      top: 0%;
+  }
+  .navbar img {
+      margin-top: .4rem;
+  }
+
+  #navbarSupportedContent li a {
+      width: 100%;
+      font-size: 16px;
+      margin-top: .39rem;
+  }
+
+  #navbarSupportedContent ul {
+    margin-top: 1rem;
+  }
+
+  .navbar-toggler{
+      margin-top: .48rem;
+  }
+
+
+  #modeButton svg {
+      width: 40px;
+      height: 40px;
+  }
+
+  #themeButton {
+      margin-top: 1.3rem;
+  }
+
+  #navbarContainer {
+      top: .49rem;
+  }
+}
+
 @media screen and (max-width: 760px) {
-    .container-fluid {
-        width: 100%;
-        top: 0%;
-    }
-    .navbar img {
-        margin-top: .4rem;
-    }
+  #navbarSupportedContent li a {
+    width: 100%;
+    font-size: 13px;
+    margin-top: .59rem;
+  }
 
-    #navbarSupportedContent li a {
-        width: 100%;
-        font-size: 12px;
-        margin-top: .39rem;
-    }
-
-    .navbar-toggler{
-        margin-top: .48rem;
-    }
-
-
-    #modeButton svg {
-        width: 40px;
-        height: 40px;
-    }
-
-    #themeButton {
-        margin-top: 1.3rem;
-    }
-
-    #navbarContainer {
-        top: .49rem;
-    }
+  #navbarSupportedContent ul {
+    margin-bottom: .4rem;
+  }
 }
 
 
@@ -1183,7 +1199,7 @@ a:hover{
 }
 #contactUsTextM{
   /* font-family: nazanin; */
-  font-size: 80px;
+  font-size: 70px;
   font-weight: bold;
   color: rgb(244, 191, 58);
   text-align: ltr;
@@ -1229,7 +1245,7 @@ text-align: left;
 
 
 #contactUsTextM:hover{
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 /* @font-face {
@@ -1269,9 +1285,9 @@ input[type=text], select, textarea {
 
 #news-submit{
   float: left;
-  width: 15%;
+  width: 20%;
   /* margin-top: 6px; */
-  height: 35px;
+  height: 40px;
   /* width: 160px; */
   background-image: linear-gradient(to right, rgb(229, 179, 54), rgb(244, 191, 57));
   background-position-y: 0;
@@ -1427,7 +1443,7 @@ white-space: nowrap;
 
 @media screen and (max-width: 600px) {
   .news{
-    height: 400px;
+    height: 450px;
   }
   #firstnameid{
     font-size: 15px;
@@ -1538,7 +1554,6 @@ white-space: nowrap;
       width: 80%;
       height: 50%;
       margin: 1em 0;
-      
     }
 
 
@@ -1586,3 +1601,10 @@ white-space: nowrap;
       }
 }
 
+.svg-light {
+  
+}
+
+.svg-dark {
+  display: none;
+}

@@ -1,3 +1,4 @@
+var i = 0;
 function changeMode() {
     var bodyContainer = document.body;
     bodyContainer.classList.toggle("dark-mode-body");
@@ -27,7 +28,15 @@ function changeMode() {
     activitiesContainer10.classList.toggle("dark-product-card");
     var news = document.getElementById("news");
     news.classList.toggle("dark-product-card");
-    
+    //
+    if (i % 2 == 0) {
+      document.getElementById("svgLight").style.display = "none";
+      document.getElementById("svgDark").style.display = "block";
+    } else {
+      document.getElementById("svgDark").style.display = "none";
+      document.getElementById("svgLight").style.display = "block";
+    }
+    i += 1;
 }
 
 function changeHeaderTheme (){
@@ -119,6 +128,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
  var lastID = 1;
  var id = lastID;
 function turnRight(){
+console.log('ggg');
   var holder = itemsId.pop();
   id = holder.className[9];
   if(lastID == holder.className[9]) {
@@ -200,16 +210,25 @@ function launch_toast() {
 }
 
 
-$(document).ready(function(){
-$("#news-submit").click(function(){
-console.log('jjjj');
-  $("#myModal").modal();
-});
-});
+// $(document).ready(function(){
+// $("#news-submit").click(function(){
+// console.log('jjjj');
+//   $("#myModal").modal();
+// });
+// });
 
-$(document).ready(function(){
-  $("#news-submit2").click(function(){
-    console.log('jjjj');
-    $("#myModal").modal();
-  });
-  });
+// $(document).ready(function(){
+//   $("#news-submit2").click(function(){
+//     console.log('jjjj');
+//     $("#myModal").modal();
+//   });
+//   });
+
+
+function buttonClicked() {
+  var txt;
+  if (confirm("Press a button!")) {
+    launch_toast();
+  } else {
+  }
+}
